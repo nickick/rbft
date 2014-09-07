@@ -6,6 +6,10 @@ module ChatDemo
       erb :"index.html"
     end
 
+    get "/camera" do
+      erb :"camera.html"
+    end
+
     get "/assets/js/application.js" do
       content_type :js
       @scheme = ENV['RACK_ENV'] == "production" ? "wss://" : "ws://"
